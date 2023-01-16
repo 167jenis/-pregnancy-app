@@ -8,24 +8,24 @@ import {
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab3.css";
 
-const Tab3 = () => {
+const Tab4 = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
+          <IonTitle>Tab 4</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
+            <IonTitle size="large">Tab 4</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <ExploreContainer name="Tab 4 page" />
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab3;
+export default Tab4;
