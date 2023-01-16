@@ -6,33 +6,26 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
-import "./Tab1.css";
+import "./Tab3.css";
 
-const Tab1 = () => {
+const Tab5 = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>
-            <p>Monday,12 Dec.</p>
-            <p>
-              Today
-            </p>
-          </IonTitle>
+          <IonTitle>Tab 5</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle>
-
-            </IonTitle>
+            <IonTitle size="large">Tab 5</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <ExploreContainer name="Tab 5 page" />
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab1;
+export default Tab5;
