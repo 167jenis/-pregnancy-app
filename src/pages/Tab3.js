@@ -13,7 +13,7 @@ const Tab3 = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
+          <IonTitle>Tab 33</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
