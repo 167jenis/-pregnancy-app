@@ -14,8 +14,9 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
-import { arrowForwardCircleOutline } from "ionicons/icons";
+import { arrowForwardOutline } from "ionicons/icons";
 import { IonRange } from "@ionic/react";
+import roundImg from "../assets/images/tab-1 image/round-img.png"
 import "./Tab1.css";
 
 const Tab1 = () => {
@@ -26,18 +27,13 @@ const Tab1 = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
+
           <IonTitle>
-            <p>Monday,12 Dec.</p>
-            <p>Today</p>
+            <p className="m-0 fs-5 fw-light pt-2">Monday,12 Dec.</p>
+            <p className="m-0 fs-5 fw-semibold pb-1">Today</p>
           </IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      {/* <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle> */}
+     
+
       <>
         <div className="home-content">
           <IonSlides pager={true} options={slideOpts}>
@@ -48,19 +44,22 @@ const Tab1 = () => {
                   alt=""
                 />
               </div>
-              <div></div>
               {/* <h1>Slide 1</h1> */}
             </IonSlide>
             <IonSlide>
-              <h1>Slide 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Recusandae dicta molestiae quis deserunt non nemo nesciunt,
+                aperiam quibusdam doloremque magnam?
+              </p>
             </IonSlide>
             <IonSlide>
               <h1>Slide 3</h1>
             </IonSlide>
           </IonSlides>
 
-          <IonCard>
-            <div className="d-flex align-items-center justify-content-between w-100 p-2">
+          <IonCard className="rounded-4">
+            <div className="d-flex align-items-center justify-content-between w-100 p-2 card1_main">
               <div className="w-auto">
                 <IonCardHeader className="py-2 px-1 px-0">
                   <IonCardTitle className="hedding">
@@ -70,29 +69,28 @@ const Tab1 = () => {
                 </IonCardHeader>
 
                 <IonCardContent className="p-0 px-1">
-                  <p className="small-hedding fw-semibold">First trimester</p>
+                  <p className="small-hedding fw-semibold text-dark">First trimester</p>
                   <IonRange className="w-100 ps-2 py-0"></IonRange>
                 </IonCardContent>
               </div>
               <div>
                 <IonIcon
-                  className="p-2 card_icon_size"
-                  icon={arrowForwardCircleOutline}
+                  className="card_icon_size me-1"
+                  icon={arrowForwardOutline}
                 ></IonIcon>
               </div>
             </div>
           </IonCard>
 
-          <IonCard>
+          <IonCard className="rounded-4 shadow">
             <div className="d-flex align-items-center justify-content-between w-100 p-2">
               <div>
                 <div className="card_image">
                   <img
-                    src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&usqp=CAU"
+                    src={roundImg}
                     className="w-100 h-100 rounded-circle"
                   />
                 </div>
-
               </div>
               <div className="w-auto ps-1">
                 <IonCardContent className="p-0">
@@ -119,11 +117,6 @@ const Tab1 = () => {
         </div>
       </>
 
-      {/* </IonTitle>
-          </IonToolbar>
-        </IonHeader> */}
-      {/* <ExploreContainer /> */}
-      {/* </IonContent> */}
     </IonPage>
   );
 };

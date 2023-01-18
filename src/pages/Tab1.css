@@ -5,6 +5,7 @@
 .hedding {
   font-size: 31px;
   font-weight: bold;
+  color: #8870E6;
 }
 
 .small-hedding {
@@ -12,35 +13,40 @@
 }
 
 .card_icon_size {
-  font-size: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #FFC8E9;
+  color: #EA0F7D;
+  padding: 15px;
 }
-
-.card_image{
-    width: 110px;
-    height: 110px;
-    padding: 10px;
+.card1_main {
+  background-color: #C6C9FF;
 }
-.crd2_hedding{
+.card_image {
+  width: 110px;
+  height: 110px;
+  padding: 10px;
+}
+.crd2_hedding {
   font-size: 20px !important;
 }
 
 @media only screen and (max-width: 460px) {
-    .hedding {
-      font-size: 20px;
-    }
-    .small-hedding {
-      font-size: 16px !important;
-    }
-    .card_icon_size {
-      font-size: 35px;
-    }
-    .card_image{
-        width: 80px;
-        height: 80px;
-        padding: 6px;
-    }
-    .crd2_hedding{
-        font-size: 16px !important;
-      }
+  .hedding {
+    font-size: 20px;
   }
-
+  .small-hedding {
+    font-size: 16px !important;
+  }
+  .card_icon_size {
+    font-size: 22px;
+  }
+  .card_image {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+  }
+  .crd2_hedding {
+    font-size: 16px !important;
+  }
+}

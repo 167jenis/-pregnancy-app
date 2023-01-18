@@ -53,10 +53,10 @@ const App = () => (
           <Route path="/me">
             <Tab3 />
           </Route>
-          <Route path="/denny">
+          <Route path="/tab4">
             <Tab4 />
           </Route>
-          <Route path="/denny">
+          <Route path="/tab5">
             <Tab5 />
           </Route>
           <Route exact path="/">
@@ -76,11 +76,11 @@ const App = () => (
             <IonIcon icon={square} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/denny">
+          <IonTabButton tab="tab4" href="/tab4">
             <IonIcon icon={home} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab5" href="/denny">
+          <IonTabButton tab="tab5" href="/tab5">
             <IonIcon icon={home} />
             <IonLabel></IonLabel>
           </IonTabButton>
