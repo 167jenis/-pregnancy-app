@@ -16,7 +16,12 @@ import {
 import ExploreContainer from "../components/ExploreContainer";
 import { arrowForwardOutline } from "ionicons/icons";
 import { IonRange } from "@ionic/react";
-import roundImg from "../assets/images/tab-1 image/round-img.png"
+import roundImg from "../assets/images/tab-1 image/round-img.png";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./Tab1.css";
 
 const Tab1 = () => {
@@ -27,16 +32,41 @@ const Tab1 = () => {
 
   return (
     <IonPage>
-
-          <IonTitle>
-            <p className="m-0 fs-5 fw-light pt-2">Monday,12 Dec.</p>
-            <p className="m-0 fs-5 fw-semibold pb-1">Today</p>
-          </IonTitle>
-     
+      <IonTitle>
+        <p className="m-0 fs-5 fw-light pt-2">Monday,12 Dec.</p>
+        <p className="m-0 fs-5 fw-semibold pb-1">Today</p>
+      </IonTitle>
 
       <>
         <div className="home-content">
-          <IonSlides pager={true} options={slideOpts}>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Autoplay, Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="slide1">
+                <div className="text-start slide1_contain">
+                <h4 className="m-0 text-white">
+                  Good Morning <br /> Fezz
+                </h4>
+                <button>Your Profile</button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+          </Swiper>
+
+          {/* <IonSlides pager={true} options={slideOpts}>
             <IonSlide>
               <div>
                 <img
@@ -44,7 +74,7 @@ const Tab1 = () => {
                   alt=""
                 />
               </div>
-              {/* <h1>Slide 1</h1> */}
+
             </IonSlide>
             <IonSlide>
               <p>
@@ -56,7 +86,7 @@ const Tab1 = () => {
             <IonSlide>
               <h1>Slide 3</h1>
             </IonSlide>
-          </IonSlides>
+          </IonSlides> */}
 
           <IonCard className="rounded-4">
             <div className="d-flex align-items-center justify-content-between w-100 p-2 card1_main">
@@ -69,7 +99,9 @@ const Tab1 = () => {
                 </IonCardHeader>
 
                 <IonCardContent className="p-0 px-1">
-                  <p className="small-hedding fw-semibold text-dark">First trimester</p>
+                  <p className="small-hedding fw-semibold text-dark">
+                    First trimester
+                  </p>
                   <IonRange className="w-100 ps-2 py-0"></IonRange>
                 </IonCardContent>
               </div>
@@ -86,10 +118,7 @@ const Tab1 = () => {
             <div className="d-flex align-items-center justify-content-between w-100 p-2">
               <div>
                 <div className="card_image">
-                  <img
-                    src={roundImg}
-                    className="w-100 h-100 rounded-circle"
-                  />
+                  <img src={roundImg} className="w-100 h-100 rounded-circle" />
                 </div>
               </div>
               <div className="w-auto ps-1">
@@ -116,7 +145,6 @@ const Tab1 = () => {
           </IonCard>
         </div>
       </>
-
     </IonPage>
   );
 };

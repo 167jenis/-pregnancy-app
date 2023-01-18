@@ -2,10 +2,41 @@
   display: block !important;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hedding {
   font-size: 31px;
   font-weight: bold;
-  color: #8870E6;
+  color: #8870e6;
 }
 
 .small-hedding {
@@ -15,12 +46,12 @@
 .card_icon_size {
   font-size: 30px;
   border-radius: 50%;
-  background-color: #FFC8E9;
-  color: #EA0F7D;
+  background-color: #ffc8e9;
+  color: #ea0f7d;
   padding: 15px;
 }
 .card1_main {
-  background-color: #C6C9FF;
+  background-color: #c6c9ff;
 }
 .card_image {
   width: 110px;
@@ -29,6 +60,26 @@
 }
 .crd2_hedding {
   font-size: 20px !important;
+}
+
+.slide1 {
+  background-image: url(../assets/images/tab-1\ image/Group1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  /* background-size: contain; */
+  width: 100%;
+  height: 450px;
+  position: relative;
+  /* border: 3px solid red; */
+  /* background-color:#ea0f7d !important; */
+}
+
+.slide1_contain {
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
 }
 
 @media only screen and (max-width: 460px) {
