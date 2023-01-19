@@ -21,7 +21,7 @@ const Tab4 = () => {
             <IonIcon icon={closeOutline}></IonIcon>
           </span>
         </div>
-        <div className="tab-2_main">
+        <div className="tab-4_main">
           <div className="d-flex align-items-center">
             <img src={Vector} alt="" className="me-2 hedding_img" />
             <h4 className="m-0 ms-1">Your weight and your fertility</h4>

@@ -1,6 +1,9 @@
 .ion-page {
   display: block !important;
 }
+.home-content{
+  padding:20px;
+}
 
 .swiper {
   width: 100%;
@@ -80,6 +83,13 @@
   position: absolute;
   bottom: 50px;
   left: 70px;
+}
+.slide1_btn{
+  border: 3px solid white;
+  background-color: none !important;
+  padding: 10px 20px;
+  border-radius: 13px;
+  opacity: 0.6;
 }
 
 @media only screen and (max-width: 460px) {

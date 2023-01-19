@@ -38,7 +38,7 @@ const Tab1 = () => {
       </IonTitle>
 
       <>
-        <div className="home-content">
+        <div>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -55,10 +55,10 @@ const Tab1 = () => {
             <SwiperSlide>
               <div className="slide1">
                 <div className="text-start slide1_contain">
-                <h4 className="m-0 text-white">
-                  Good Morning <br /> Fezz
-                </h4>
-                <button>Your Profile</button>
+                  <h3 className="m-0 text-white">
+                    Good Morning <br /> Fezz
+                  </h3>
+                  <button className="slide1_btn mt-1">Your Profile</button>
                 </div>
               </div>
             </SwiperSlide>
@@ -88,61 +88,66 @@ const Tab1 = () => {
             </IonSlide>
           </IonSlides> */}
 
-          <IonCard className="rounded-4">
-            <div className="d-flex align-items-center justify-content-between w-100 p-2 card1_main">
-              <div className="w-auto">
-                <IonCardHeader className="py-2 px-1 px-0">
-                  <IonCardTitle className="hedding">
-                    1 week, 1 day pregnant
-                  </IonCardTitle>
-                  {/* <IonCardSubtitle>Card Subtitle</IonCardSubtitle> */}
-                </IonCardHeader>
+          <div className="home-content">
+            <IonCard className="rounded-4 m-0">
+              <div className="d-flex align-items-center justify-content-between w-100 p-2 card1_main">
+                <div className="w-auto">
+                  <IonCardHeader className="py-2 px-1 px-0">
+                    <IonCardTitle className="hedding">
+                      1 week, 1 day pregnant
+                    </IonCardTitle>
+                    {/* <IonCardSubtitle>Card Subtitle</IonCardSubtitle> */}
+                  </IonCardHeader>
 
-                <IonCardContent className="p-0 px-1">
-                  <p className="small-hedding fw-semibold text-dark">
-                    First trimester
-                  </p>
-                  <IonRange className="w-100 ps-2 py-0"></IonRange>
-                </IonCardContent>
-              </div>
-              <div>
-                <IonIcon
-                  className="card_icon_size me-1"
-                  icon={arrowForwardOutline}
-                ></IonIcon>
-              </div>
-            </div>
-          </IonCard>
-
-          <IonCard className="rounded-4 shadow">
-            <div className="d-flex align-items-center justify-content-between w-100 p-2">
-              <div>
-                <div className="card_image">
-                  <img src={roundImg} className="w-100 h-100 rounded-circle" />
+                  <IonCardContent className="p-0 px-1">
+                    <p className="small-hedding fw-semibold text-dark">
+                      First trimester
+                    </p>
+                    <IonRange className="w-100 ps-2 py-0"></IonRange>
+                  </IonCardContent>
+                </div>
+                <div>
+                  <IonIcon
+                    className="card_icon_size me-1"
+                    icon={arrowForwardOutline}
+                  ></IonIcon>
                 </div>
               </div>
-              <div className="w-auto ps-1">
-                <IonCardContent className="p-0">
-                  <p className="crd2_hedding fw-semibold">
-                    Can food choices affect fertility?
-                  </p>
-                  {/* <IonRange className="w-100 ps-2 py-0"></IonRange> */}
-                  <p className=" ">
-                    A healthy, balanced, nutritious diet is importantfor
-                    everyone, throughout the...
-                  </p>
-                  <div>
-                    <ion-button shape="round" color="medium">
-                      READ
-                    </ion-button>
-                    <ion-button shape="round" color="medium">
-                      ESSENTIALS
-                    </ion-button>
+            </IonCard>
+
+            <IonCard className="rounded-4 shadow m-0 mt-3">
+              <div className="d-flex align-items-center justify-content-between w-100 p-2">
+                <div>
+                  <div className="card_image">
+                    <img
+                      src={roundImg}
+                      className="w-100 h-100 rounded-circle"
+                    />
                   </div>
-                </IonCardContent>
+                </div>
+                <div className="w-auto ps-1">
+                  <IonCardContent className="p-0">
+                    <p className="crd2_hedding fw-semibold text-dark">
+                      Can food choices affect fertility?
+                    </p>
+                    {/* <IonRange className="w-100 ps-2 py-0"></IonRange> */}
+                    <p className=" ">
+                      A healthy, balanced, nutritious diet is importantfor
+                      everyone, throughout the...
+                    </p>
+                    <div>
+                      <ion-button shape="round" color="medium">
+                        READ
+                      </ion-button>
+                      <ion-button shape="round" color="medium">
+                        ESSENTIALS
+                      </ion-button>
+                    </div>
+                  </IonCardContent>
+                </div>
               </div>
-            </div>
-          </IonCard>
+            </IonCard>
+          </div>
         </div>
       </>
     </IonPage>
