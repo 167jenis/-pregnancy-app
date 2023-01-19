@@ -59,7 +59,7 @@ const App = () => (
           <Route path="/me">
             <Tab3 />
           </Route>
-          <Route path="/denny">
+          <Route path="/user">
             <Tab4 />
           </Route>
           <Route path="/denny">
@@ -85,7 +85,7 @@ const App = () => (
             <img src={Me} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/denny" className="icon-img">
+          <IonTabButton tab="tab4" href="/user" className="icon-img">
             {/* <IonIcon icon={home} /> */}
             <img src={User} />
             <IonLabel></IonLabel>
