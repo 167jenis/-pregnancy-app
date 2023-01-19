@@ -16,6 +16,7 @@ import Tab2 from "./pages/Tab2";
 import Tab3 from "./pages/Tab3";
 import Tab4 from "./pages/Tab4";
 import Tab5 from "./pages/Tab5";
+// import Home from "../src/assets/images/tab images/home.png"
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -32,7 +33,12 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-import Home from "../src/assets/images/tab images/home.png"
+import Home from "../src/assets/images/tab-images/Home.svg"
+import Baby from "../src/assets/images/tab-images/Baby.svg"
+import Me from "../src/assets/images/tab-images/Me.svg"
+import User from "../src/assets/images/tab-images/User.svg"
+import Menu from "../src/assets/images/tab-images/Menu.svg"
+import "./App.css"
 
 /* Theme variables */
 import "./theme/variables.css";
@@ -53,35 +59,40 @@ const App = () => (
           <Route path="/me">
             <Tab3 />
           </Route>
-          <Route path="/tab4">
+          <Route path="/denny">
             <Tab4 />
           </Route>
-          <Route path="/tab5">
+          <Route path="/denny">
             <Tab5 />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/home">
-            <IonIcon icon={home} />
+        <IonTabBar slot="bottom" className="icones">
+          <IonTabButton tab="tab1" href="/home" className="icon-img">
+            {/* <IonIcon icon={home} /> */}
+            <img src={Home} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/baby">
-            <IonIcon icon={ellipse} />
+          <IonTabButton tab="tab2" href="/baby" className="icon-img">
+            {/* <IonIcon icon={ellipse} /> */}
+            <img src={Baby} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/me">
-            <IonIcon icon={square} />
+          <IonTabButton tab="tab3" href="/me" className="icon-img">
+            {/* <IonIcon icon={square} /> */}
+            <img src={Me} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/tab4">
-            <IonIcon icon={home} />
+          <IonTabButton tab="tab4" href="/denny" className="icon-img">
+            {/* <IonIcon icon={home} /> */}
+            <img src={User} />
             <IonLabel></IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab5" href="/tab5">
-            <IonIcon icon={home} />
+          <IonTabButton tab="tab5" href="/denny" className="icon-img">
+            {/* <IonIcon icon={home} /> */}
+            <img src={Menu} />
             <IonLabel></IonLabel>
           </IonTabButton>
         </IonTabBar>

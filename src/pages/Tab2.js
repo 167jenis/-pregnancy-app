@@ -7,66 +7,87 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
-import Daily from "../assets/images/tab-2 image/Daily.png";
-import Weekly from "../assets/images/tab-2 image/Weekly.png";
-import Scan from "../assets/images/tab-2 image/Scan.png";
-import Size from "../assets/images/tab-2 image/Size.png";
-import Timeline from "../assets/images/tab-2 image/Timeline.png";
-import Group208 from "../assets/images/tab-2 image/Group 208.png";
-import { arrowBackOutline, personCircleOutline } from "ionicons/icons";
+import { chevronBackOutline, personCircleOutline } from "ionicons/icons";
+import Daily from '../assets/images/baby/daily.png'
 import "./Tab2.css";
 
 const Tab2 = () => {
   return (
-    <IonPage>
+    <>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>
-            <div className="d-flex justify-content-between align-items-center">
-              <IonIcon icon={arrowBackOutline} className="fs-2"></IonIcon>
-              <h4 className="fw-bold m-0">Baby</h4>
-              <IonIcon icon={personCircleOutline} className="fs-3"></IonIcon>
-            </div>
-          </IonTitle>
-        </IonToolbar>
+        <div className="header py-3 px-3 d-flex justify-content-between align-items-center bg-white">
+          <IonIcon icon={chevronBackOutline} style={{ fontSize: "24px" }} />
+          <p className="m-0 fw-bold fs-5">Baby</p>
+          <IonIcon icon={personCircleOutline} style={{ fontSize: "24px" }} />
+        </div>
       </IonHeader>
-      <>
-        <div className="tab-2_main">
-          <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 g-4">
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Daily} className="card-img" />
+      <IonContent fullscreen>
+        <div className="px-3 py-2">
+          <div className="row">
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#BBECD7", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Daily</p>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Weekly} className="card-img" />
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#E6E9ED", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Weekly</p>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Scan} className="card-img" />
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#FEE3E3", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Scan</p>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Size} className="card-img" />
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#FEF0D7", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Size</p>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Timeline} className="card-img" />
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#D7EDF0", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Timeline</p>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card border-0 rounded-3 img-card">
-                <img src={Group208} className="card-img" />
+            <div className="col-6" style={{ padding: "12px" }}>
+              <div className="cards py-4 px-3 rounded-3" style={{ background: "#C4C9F0", cursor: "pointer" }}>
+                <div className="img">
+                  <img className="w-100 h-100" src={Daily} />
+                </div>
+                <div className=" text-center pt-2">
+                  <p className="m-0 fw-semibold text-black-50 fs-6">Baby Names</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </>
-    </IonPage>
+      </IonContent>
+    </>
   );
 };
 
