@@ -7,19 +7,23 @@
   height: 30vh;
   position: relative;
 }
+
 .cancel_icon {
   font-size: 30px;
   position: absolute;
   right: 30px;
   top: 20px;
 }
-.tab-4_main{
+
+.tab-4_main {
   padding: 20px;
 }
-.hedding_img{
-    width: 40px ;
-    height: 40px;
+
+.hedding_img {
+  width: 40px;
+  height: 40px;
 }
+
 ul.numbered-list {
   counter-reset: li;
   list-style-type: none;
@@ -27,10 +31,12 @@ ul.numbered-list {
   line-height: 18px;
   padding-left: 10px;
 }
+
 ul.numbered-list li {
   position: relative;
   padding: 0 0 5px 35px;
 }
+
 ul.numbered-list li:before {
   content: counter(li);
   counter-increment: li;
@@ -49,45 +55,58 @@ ul.numbered-list li:before {
   top: 4px;
 }
 
+.edit-part {
+  margin-bottom: 78px;
+}
 
+.signout {
+  padding: 15px;
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #8870E6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
 
 
 .read-more-state {
-    display: none;
-  }
+  display: none;
+}
 
-  .read-more-target {
-    opacity: 0;
-    max-height: 0;
-    font-size: 0;
-    transition: .25s ease;
-  }
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
 
-  .read-more-state:checked ~ .read-more-wrap .read-more-target {
-    opacity: 1;
-    font-size: inherit;
-    max-height: 999em;
-  }
+.read-more-state:checked~.read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
 
-  .read-more-state ~ .read-more-trigger:before {
-    content: 'Read more...';
-    color: #1EA1F1;
-    font-weight:500;
-  }
+.read-more-state~.read-more-trigger:before {
+  content: 'Read more...';
+  color: #1EA1F1;
+  font-weight: 500;
+}
 
-  .read-more-state:checked ~ .read-more-trigger:before {
-    content: 'Read less...';
-    color: #1EA1F1;
-    font-weight: 500;
-  }
+.read-more-state:checked~.read-more-trigger:before {
+  content: 'Read less...';
+  color: #1EA1F1;
+  font-weight: 500;
+}
 
-  .read-more-trigger {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 .5em;
-    /* color: #666; */
-    /* font-size: .9em; */
-    line-height: 2;
-    /* border: 1px solid #ddd; */
-    /* border-radius: .25em; */
-  }
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  /* color: #666; */
+  /* font-size: .9em; */
+  line-height: 2;
+  /* border: 1px solid #ddd; */
+  /* border-radius: .25em; */
+}

@@ -17,7 +17,7 @@ import Child from "../assets/images/tab-4 image/child.png";
 import { closeOutline } from "ionicons/icons";
 import "./Tab4.css";
 import { IonNav } from "@ionic/core/components";
-import { menuOutline, chevronBackOutline } from "ionicons/icons"
+import { menuOutline, chevronBackOutline, createOutline, personOutline, peopleOutline } from "ionicons/icons"
 
 const Tab4 = () => {
   return (
@@ -115,48 +115,81 @@ const Tab4 = () => {
           </div>
           <div className="p-3">
             <p className="fs-4 fw-semibold">Your Pregnancy</p>
-            <div className="px-3 border-dark-subtle border-bottom">
-              <div className="d-flex align-items-center pb-1">
-                <img className="me-2" src={Name} />
-                <p className="m-0 fw-semibold">Baby’s Name</p>
+            <div className="px-3">
+              <div className="border-dark-subtle border-bottom">
+                <div className="d-flex align-items-center pb-1">
+                  <img className="me-2" src={Name} />
+                  <p className="m-0 fw-semibold">Baby’s Name</p>
+                </div>
+                <input className="border-0 py-2 ps-4 w-100" placeholder="Type here..." />
               </div>
-              <input className="border-0 py-2 w-100" placeholder="Type here..." />
             </div>
-            <div className="px-3 my-2 border-dark-subtle border-bottom">
-              <div className="d-flex align-items-center pb-1">
-                <img className="me-2" src={Date} />
-                <p className="m-0 fw-semibold">Due date</p>
+            <div className="px-3">
+              <div className="mb-2 mt-3 border-dark-subtle border-bottom">
+                <div className="d-flex align-items-center pb-1">
+                  <img className="me-2" src={Date} />
+                  <p className="m-0 fw-semibold">Due date</p>
+                </div>
+                <input type="date" className="border-0 py-2 ps-4 w-100" />
               </div>
-              <input type="date" className="border-0 py-2 w-100" />
             </div>
-            <div className="px-3 my-2 border-dark-subtle border-bottom">
-              <div className="d-flex align-items-center pb-1">
-                <img className="me-2" src={Child} />
-                <p className="m-0 fw-semibold">First Child?</p>
+            <div className="px-3">
+              <div className="mb-2 mt-3 border-dark-subtle border-bottom">
+                <div className="d-flex align-items-center pb-1">
+                  <img className="me-2" src={Child} />
+                  <p className="m-0 fw-semibold">First Child?</p>
+                </div>
+                <select className="border-0 py-2 ps-4 w-100">
+                  <option value="Select">Select</option>
+                  <option value="yes" >Yes</option>
+                  <option value="no" >No</option>
+                </select>
               </div>
-              <select className="border-0 py-2 w-100">
-                <option value="Select">Select</option>
-                <option value="yes" >Yes</option>
-                <option value="no" >No</option>
-              </select>
             </div>
-            <div className="px-3 my-2 border-dark-subtle border-bottom">
-              <div className="d-flex align-items-center pb-1">
-                <img className="me-2" src={Week} />
-                <p className="m-0 fw-semibold">Show Week</p>
+            <div className="px-3">
+              <div className="mb-2 mt-3 border-dark-subtle border-bottom">
+                <div className="d-flex align-items-center pb-1">
+                  <img className="me-2" src={Week} />
+                  <p className="m-0 fw-semibold">Show Week</p>
+                </div>
+                <select className="border-0 ps-4 py-2 w-100">
+                  <option value="Select">Select</option>
+                  <option value="currant" >Currant</option>
+                  <option value="complete" >Complete</option>
+                </select>
               </div>
-              <select className="border-0 py-2 w-100">
-                <option value="Select">Select</option>
-                <option value="currant" >Currant</option>
-                <option value="complete" >Complete</option>
-              </select>
+            </div>
+
+            <div className="edit-part">
+              <p className="fs-4 fw-semibold">Account</p>
+              <div className="d-flex px-3 mb-3 justify-content-between">
+                <div className="border border-secondary-subtle gap-3 px-3 py-2 d-flex rounded-3" style={{ cursor: "pointer" }}>
+                  <IonIcon icon={createOutline} className="fs-5" />
+                  <p className="m-0">First Name</p>
+                </div>
+                <div className="border border-secondary-subtle gap-3 px-3 py-2 d-flex rounded-3" style={{ cursor: "pointer" }}>
+                  <IonIcon icon={createOutline} className="fs-5" />
+                  <p className="m-0">Last Name</p>
+                </div>
+              </div>
+              <div className="d-flex px-3 justify-content-between">
+                <div className="border border-secondary-subtle gap-3 py-2 d-flex rounded-3" style={{ cursor: "pointer", padding: "0 40px" }}>
+                  <IonIcon icon={personOutline} className="fs-5" />
+                  <p className="m-0">Age</p>
+                </div>
+                <div className="border border-secondary-subtle gap-3 py-2 d-flex rounded-3" style={{ cursor: "pointer", padding: "0 15px" }}>
+                  <IonIcon icon={peopleOutline} className="fs-5" />
+                  <p className="m-0">You are the</p>
+                </div>
+              </div>
+              <button className="signout">Sign out</button>
             </div>
           </div>
 
         </IonContent>
 
       </>
-    </IonPage>
+    </IonPage >
   );
 };
 
