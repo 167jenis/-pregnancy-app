@@ -21,7 +21,7 @@ import { menuOutline, chevronBackOutline, createOutline, personOutline, peopleOu
 
 const Tab4 = () => {
   return (
-    <IonPage>
+    <IonContent>
       <>
 
         {/* <div className="main_bg_img shadow-lg">
@@ -189,7 +189,7 @@ const Tab4 = () => {
         </IonContent>
 
       </>
-    </IonPage >
+    </IonContent>
   );
 };
 

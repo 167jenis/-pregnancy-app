@@ -26,6 +26,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Tab1.css";
+import { Link } from "react-router-dom";
 
 const Tab1 = () => {
   const slideOpts = {
@@ -34,7 +35,8 @@ const Tab1 = () => {
   };
 
   return (
-    <IonPage>
+
+    <IonContent>
       <IonHeader>
         <div className="header py-3 px-3 bg-white">
           <p className="m-0 fs-5 fw-light fs-6">Monday,12 Dec.</p>
@@ -162,9 +164,11 @@ const Tab1 = () => {
                         everyone, throughout the...
                       </p>
                       <div className="card-button d-flex mt-2">
-                        <button className="btns">
-                          READ
-                        </button>
+                        <Link to={"/read"}>
+                          <button className="btns">
+                            READ
+                          </button>
+                        </Link>
                         {/* <ion-button className="btns" shape="round" color="medium">
                           READ
                         </ion-button> */}
@@ -295,7 +299,7 @@ const Tab1 = () => {
           </div>
         </IonContent>
       </>
-    </IonPage>
+    </IonContent>
   );
 };
 

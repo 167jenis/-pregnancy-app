@@ -42,6 +42,7 @@ import "./App.css"
 
 /* Theme variables */
 import "./theme/variables.css";
+import { Read } from "./pages/Read";
 
 setupIonicReact();
 
@@ -52,6 +53,9 @@ const App = () => (
         <IonRouterOutlet>
           <Route exact path="/home">
             <Tab1 />
+          </Route>
+          <Route exact path="/read">
+            <Read />
           </Route>
           <Route exact path="/baby">
             <Tab2 />

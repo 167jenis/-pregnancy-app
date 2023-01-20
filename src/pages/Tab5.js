@@ -20,7 +20,7 @@ import "./Tab5.css";
 
 const Tab5 = () => {
   return (
-    <IonPage>
+    <IonContent>
       <IonHeader>
 
       </IonHeader>
@@ -29,7 +29,7 @@ const Tab5 = () => {
 
         </IonContent>
       </>
-    </IonPage>
+    </IonContent>
   );
 };
 
