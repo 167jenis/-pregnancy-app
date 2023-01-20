@@ -238,8 +238,8 @@ const Tab1 = () => {
                         </p>
                         {/* <IonRange className="w-100 ps-2 py-0"></IonRange> */}
                         <p className="card-p">
-                          A healthy, balanced, nutritious diet is importantfor everyone,
-                          throughout the...
+                          Breast enlargements are the UK’s most
+                          popular cosmetics procedure, and...
                         </p>
                         <div className="card-button d-flex mt-2">
                           <button className="btns">
@@ -273,8 +273,8 @@ const Tab1 = () => {
                         </p>
                         {/* <IonRange className="w-100 ps-2 py-0"></IonRange> */}
                         <p className="card-p">
-                          A healthy, balanced, nutritious diet is importantfor everyone,
-                          throughout the...
+                          “What is that smell? Is it me? Oh no!
+                          it is!” We have all been there, right?...
                         </p>
                         <div className="card-button d-flex mt-2">
                           <button className="btns">
