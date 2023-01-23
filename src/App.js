@@ -43,6 +43,8 @@ import "./App.css"
 /* Theme variables */
 import "./theme/variables.css";
 import { Read } from "./pages/Read";
+import { Login } from "./pages/login/login";
+import { Create } from "./pages/login/create";
 
 setupIonicReact();
 
@@ -68,6 +70,12 @@ const App = () => (
           </Route>
           <Route path="/denny">
             <Tab5 />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/create">
+            <Create />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />

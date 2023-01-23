@@ -3,6 +3,7 @@ import Vector from "../assets/images/tab-4 image/Vector.svg";
 import Group from "../assets/images/tab-4 image/Group.svg";
 import { closeOutline } from "ionicons/icons";
 import { IonContent, IonIcon } from '@ionic/react'
+import "./read.css"
 import React from 'react'
 
 export const Read = () => {

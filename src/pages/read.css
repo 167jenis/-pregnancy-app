@@ -55,22 +55,6 @@ ul.numbered-list li:before {
     top: 4px;
 }
 
-.edit-part {
-    margin-bottom: 78px;
-}
-
-.signout {
-    padding: 15px;
-    margin-top: 1rem;
-    width: 100%;
-    border-radius: 50px;
-    background-color: #8870E6;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
 .read-more-state {
     display: none;
 }
@@ -167,22 +151,6 @@ ul.numbered-list li:before {
     left: 0;
     top: 4px;
 }
-
-.edit-part {
-    margin-bottom: 78px;
-}
-
-.signout {
-    padding: 15px;
-    margin-top: 1rem;
-    width: 100%;
-    border-radius: 50px;
-    background-color: #8870E6;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-}
-
 
 .read-more-state {
     display: none;
