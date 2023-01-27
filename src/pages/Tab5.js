@@ -19,8 +19,10 @@ import image10 from "../assets/images/tab-1 image/image 10.png";
 import "./Tab5.css";
 import { IonToggle } from '@ionic/react';
 import { chevronForwardOutline, settingsOutline } from "ionicons/icons";
+import { useHistory } from "react-router";
 
 const Tab5 = () => {
+  const history = useHistory()
   return (
     <IonContent>
       <IonHeader>
@@ -32,11 +34,11 @@ const Tab5 = () => {
         <div>
           <h5 className="mb-3">Menu</h5>
           <div className="px-2">
-            <div className="setting-content">
+            <div onClick={() => history.push('/setting')} className="setting-content">
               <p className="mb-0">Setting</p>
               <IonIcon icon={chevronForwardOutline} />
             </div>
-            <div className="setting-content">
+            <div onClick={() => history.push('/tell-a-friend')} className="setting-content">
               <p className="mb-0">Tell a friend</p>
               <IonIcon icon={chevronForwardOutline} />
             </div>
@@ -50,10 +52,6 @@ const Tab5 = () => {
             </div>
             <div className="setting-content">
               <p className="mb-0">Contact us</p>
-              <IonIcon icon={chevronForwardOutline} />
-            </div>
-            <div className="setting-content">
-              <p className="mb-0">Download Baby+ on Google Play</p>
               <IonIcon icon={chevronForwardOutline} />
             </div>
             <div className="setting-content">
@@ -86,7 +84,7 @@ const Tab5 = () => {
             <div className="setting-content">
               <p className="mb-0">First Child?</p>
               {/* <IonIcon icon={chevronForwardOutline} /> */}
-              <select className="border-0 py-2 ps-4">
+              <select className="border-0 ps-4">
                 <option className="options" value="Select">Select</option>
                 <option className="options" value="yes" >Yes</option>
                 <option className="options" value="no" >No</option>
@@ -95,7 +93,7 @@ const Tab5 = () => {
             <div className="setting-content">
               <p className="mb-0">Show week</p>
               {/* <IonIcon icon={chevronForwardOutline} /> */}
-              <select className="border-0 py-2 ps-4">
+              <select className="border-0 ps-4">
                 <option className="options" value="Select">Select</option>
                 <option className="options" value="current" >Current</option>
                 <option className="options" value="complete" >Complete</option>
@@ -109,7 +107,20 @@ const Tab5 = () => {
             <div className="setting-content">
               <p className="mb-0">Baby already born?</p>
               {/* <IonIcon icon={chevronForwardOutline} /> */}
-              <IonToggle enableOnOffLabels={true}></IonToggle>
+              <IonToggle className="toggles" enableOnOffLabels={true}></IonToggle>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 className="mb-3 mt-4">Data</h5>
+          <div className="px-2">
+            <div className="setting-content">
+              <p className="mb-0">Export all data</p>
+              <IonIcon icon={chevronForwardOutline} />
+            </div>
+            <div className="setting-content">
+              <p className="mb-0">Reset app</p>
+              <IonIcon icon={chevronForwardOutline} />
             </div>
           </div>
         </div>

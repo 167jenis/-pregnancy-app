@@ -18,10 +18,10 @@ const Tab2 = () => {
     <>
       <IonContent>
         <IonHeader>
-          <div className="header py-3 px-3 d-flex justify-content-between align-items-center">
-            <IonIcon icon={chevronBackOutline} style={{ fontSize: "24px", color: "white" }} />
+          <div className="header py-3 px-3 text-center">
+            {/* <IonIcon icon={chevronBackOutline} style={{ fontSize: "24px", color: "white" }} /> */}
             <p className="m-0 fw-bold fs-5 text-white">Baby</p>
-            <IonIcon icon={personCircleOutline} style={{ fontSize: "24px", color: "white" }} />
+            {/* <IonIcon icon={personCircleOutline} style={{ fontSize: "24px", color: "white" }} /> */}
           </div>
         </IonHeader>
         <IonContent fullscreen>

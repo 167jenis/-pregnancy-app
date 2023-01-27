@@ -26,10 +26,10 @@ const Tab4 = () => {
 
 
         <IonHeader>
-          <div className="header py-3 px-3 d-flex justify-content-between align-items-center" style={{ background: "#FF8686" }}>
-            <IonIcon icon={chevronBackOutline} style={{ fontSize: "24px", color: "#fff" }} />
+          <div className="header py-3 px-3 text-center" style={{ background: "#FF8686" }}>
+            {/* <IonIcon icon={chevronBackOutline} style={{ fontSize: "24px", color: "#fff" }} /> */}
             <p className="m-0 fw-bold fs-5 text-white">Profile</p>
-            <IonIcon icon={menuOutline} style={{ fontSize: "24px", color: "#fff" }} />
+            {/* <IonIcon icon={menuOutline} style={{ fontSize: "24px", color: "#fff" }} /> */}
           </div>
         </IonHeader>
 

@@ -64,6 +64,8 @@ import { MomsBump } from "./pages/Me/MomsBump";
 import { BirthPlan } from "./pages/Me/BirthPlan";
 import { Appointments } from "./pages/Me/Appointments";
 import { ToDo } from "./pages/Me/ToDo";
+import { Setting } from "./pages/setting/setting";
+import { TellAFriend } from "./pages/setting/tellAFriend";
 
 setupIonicReact();
 
@@ -99,6 +101,8 @@ const App = () => {
               <Route path="/create">
                 <Create />
               </Route>
+
+              {/*  Page Route  */}
               <Route path="/daily">
                 <Daily />
               </Route>
@@ -117,6 +121,8 @@ const App = () => {
               <Route path="/babyname">
                 <Babyname />
               </Route>
+
+              {/* Me Page Route  */}
               <Route path="/guides">
                 <Guides />
               </Route>
@@ -134,6 +140,14 @@ const App = () => {
               </Route>
               <Route path="/todo">
                 <ToDo />
+              </Route>
+
+              {/* Setting Page Route  */}
+              <Route path="/setting">
+                <Setting />
+              </Route>
+              <Route path="/tell-a-friend">
+                <TellAFriend />
               </Route>
               <Route exact path="/">
                 <Redirect to="/home" />
