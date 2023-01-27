@@ -17,6 +17,7 @@ import ExploreContainer from "../components/ExploreContainer";
 import image9 from "../assets/images/tab-1 image/image 9.png";
 import image10 from "../assets/images/tab-1 image/image 10.png";
 import "./Tab5.css";
+import { IonToggle } from '@ionic/react';
 import { chevronForwardOutline, settingsOutline } from "ionicons/icons";
 
 const Tab5 = () => {
@@ -75,7 +76,8 @@ const Tab5 = () => {
             </div>
             <div className="setting-content">
               <p className="mb-0">Due Date</p>
-              <IonIcon icon={chevronForwardOutline} />
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
+              <input type="date" />
             </div>
             <div className="setting-content">
               <p className="mb-0">Due Date calculator</p>
@@ -83,19 +85,31 @@ const Tab5 = () => {
             </div>
             <div className="setting-content">
               <p className="mb-0">First Child?</p>
-              <IonIcon icon={chevronForwardOutline} />
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
+              <select className="border-0 py-2 ps-4">
+                <option className="options" value="Select">Select</option>
+                <option className="options" value="yes" >Yes</option>
+                <option className="options" value="no" >No</option>
+              </select>
             </div>
             <div className="setting-content">
               <p className="mb-0">Show week</p>
-              <IonIcon icon={chevronForwardOutline} />
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
+              <select className="border-0 py-2 ps-4">
+                <option className="options" value="Select">Select</option>
+                <option className="options" value="current" >Current</option>
+                <option className="options" value="complete" >Complete</option>
+              </select>
             </div>
             <div className="setting-content">
               <p className="mb-0">Pregnancy loss?</p>
-              <IonIcon icon={chevronForwardOutline} />
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
+              <IonToggle enableOnOffLabels={true}></IonToggle>
             </div>
             <div className="setting-content">
               <p className="mb-0">Baby already born?</p>
-              <IonIcon icon={chevronForwardOutline} />
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
+              <IonToggle enableOnOffLabels={true}></IonToggle>
             </div>
           </div>
         </div>
