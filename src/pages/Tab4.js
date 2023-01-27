@@ -71,9 +71,9 @@ const Tab4 = () => {
                   <p className="m-0 fw-semibold">First Child?</p>
                 </div>
                 <select className="border-0 py-2 ps-4 w-100">
-                  <option value="Select">Select</option>
-                  <option value="yes" >Yes</option>
-                  <option value="no" >No</option>
+                  <option className="options" value="Select">Select</option>
+                  <option className="options" value="yes" >Yes</option>
+                  <option className="options" value="no" >No</option>
                 </select>
               </div>
             </div>

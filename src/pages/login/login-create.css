@@ -89,3 +89,38 @@
     font-size: 15px;
 
 }
+
+.eye {
+    color: #c2c2c2;
+}
+
+.eyes {
+    color: #FF8686;
+}
+
+.socials {
+    padding: 7px 10px;
+    width: 100%;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    margin-bottom: 1rem;
+    border-radius: 50PX;
+    display: flex;
+    align-items: center;
+    background-color: #FF8686;
+}
+
+.socials img {
+    height: auto;
+    width: 12%;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.socials p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
