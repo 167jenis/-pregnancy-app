@@ -15,7 +15,7 @@ export const Size = () => {
                     <IonIcon icon={personCircleOutline} style={{ fontSize: "24px", color: "white" }} />
                 </div>
             </IonHeader>
-            <div>Denish</div>
+            <div>Utsav</div>
         </IonContent>
     )
 }

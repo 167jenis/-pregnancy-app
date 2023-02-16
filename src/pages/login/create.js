@@ -1,59 +1,100 @@
-import { IonContent, IonHeader, IonIcon } from '@ionic/react'
-import Signin from "../../assets/images/create.jpg"
-import { personOutline, keyOutline, callOutline, eyeOffOutline, eyeOutline } from "ionicons/icons"
-import Google from '../../assets/images/login-icon/google.jpg'
-import Facebook from '../../assets/images/login-icon/facebook.jpg'
-import Phone from '../../assets/images/login-icon/phone.jpg'
-import React, { useState } from 'react'
-import "./login-create.css"
+import { IonContent, IonHeader, IonIcon } from "@ionic/react";
+import Signin from "../../assets/images/create.jpg";
+import Axios from "axios";
+                           
+import {
+  personOutline,
+  keyOutline,
+  callOutline,
+  eyeOffOutline,
+  eyeOutline,
+} from "ionicons/icons";
+import Google from "../../assets/images/login-icon/google.jpg";
+import Facebook from "../../assets/images/login-icon/facebook.jpg";
+import Phone from "../../assets/images/login-icon/phone.jpg";
+import React, { useState } from "react";
+import "./login-create.css";
 
 export const Create = () => {
-    const [activePassword, setActivePassword] = useState("eye")
-    const [activeConfPassword, setActiveConfPassword] = useState("eye")
-    return (
-        <IonContent>
-            <div className='main-login'>
-                <div className='logimg'>
-                    <img src={Signin} />
-                </div>
-                <div className='login-content'>
-                    <div className='log-cont'>
-                        <h3>Create Your Account</h3>
-                        <div className='login-create'>
-                            <IonIcon icon={personOutline} style={{ color: "#C2C2C2" }} />
-                            <input type="text" placeholder="Email...." />
-                        </div>
-                        <div className='login-create'>
-                            <IonIcon icon={callOutline} style={{ color: "#C2C2C2" }} />
-                            <input type="text" placeholder="Phone...." />
-                        </div>
-                        <div className='login-create'>
-                            <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
-                            <input type="password" placeholder="Password...." />
-                            <div className='d-flex justify-content-center align-items-center' onClick={() => activePassword == 'eye' ? setActivePassword('eyes') : setActivePassword('eye')}>
-                                {activePassword == 'eye' ?
-                                    <IonIcon icon={eyeOffOutline} className="eye" /> :
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [pass, setpass] = useState("");
+  const [cpass, setcpass] = useState("");
 
-                                    <IonIcon icon={eyeOutline} className="eyes" />
-                                }
-                            </div>
-                        </div>
-                        <div className='login-create'>
-                            <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
-                            <input type="password" placeholder="Confirm Password...." />
-                            <div className='d-flex justify-content-center align-items-center' onClick={() => activeConfPassword == 'eye' ? setActiveConfPassword('eyes') : setActiveConfPassword('eye')}>
-                                {activeConfPassword == 'eye' ?
-                                    <IonIcon icon={eyeOffOutline} className="eye" /> :
+  const [activePassword, setActivePassword] = useState("");
+  const [activeConfPassword, setActiveConfPassword] = useState("");
 
-                                    <IonIcon icon={eyeOutline} className="eyes" />
-                                }
-                            </div>
-                        </div>
-                        <button>Sign In</button>
-                        <div className='changes'>
-                            <p>Alredy have an account? <a href='/login' >Sign Up</a></p>
-                        </div>
-                        <div className='d-flex justify-content-center align-items-center flex-column mt-3'>
+  const handleSubmit = (e) => { const data = {
+   email:email,contactNo:phone,password:pass,conformPassword:cpass
+  }
+    Axios.post("https://c982-2405-201-2029-a83c-49d4-e833-29b1-98bd.in.ngrok.io/v1/user/auth/register",data).then(
+      (response) => {
+        console.log(response)
+      }
+    );
+    console.log('dataaaa',email,phone,pass,cpass)}
+
+
+  return (
+    <IonContent>
+      <div className="main-login">
+        <div className="logimg">
+          <img src={Signin} />
+        </div>
+        <div className="login-content">
+          <div className="log-cont">
+            <h3>Create Your Account</h3>
+            <div className="login-create">
+              <IonIcon icon={personOutline} style={{ color: "#C2C2C2" }} />
+              <input type="text" value={email} name="email" placeholder="Email...." onChange={(e) => setemail(e.target.value)} required/>
+            </div>
+            <div className="login-create">
+              <IonIcon icon={callOutline} style={{ color: "#C2C2C2" }} />
+              <input type="text" value={phone} name="phone" placeholder="Phone...." onChange={(e) => setphone(e.target.value)} maxLength="10" required="true"/>
+            </div>
+            <div className="login-create">
+              <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
+              <input type="password" value={pass} name="pass" placeholder="Password...." onChange={(e) => setpass(e.target.value)} required="true"/>
+              <div
+                className="d-flex justify-content-center align-items-center"
+                onChange={(e) =>
+                  activePassword == "eye"
+                    ? setActivePassword("eyes")
+                    : setActivePassword("eye")
+                }
+              >
+                {activePassword == "eye" ? (
+                  <IonIcon icon={eyeOffOutline} className="eye" />
+                ) : (
+                  <IonIcon icon={eyeOutline} className="eyes" />
+                )}
+              </div>
+            </div>
+            <div className="login-create">
+              <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
+              <input type="password" value={cpass} name="cpass" onChange={(e) => setcpass(e.target.value)} placeholder="Confirm Password...." required="true"/>
+              <div
+                className="d-flex justify-content-center align-items-center"
+                onClick={() =>
+                  activeConfPassword == "eye"
+                    ? setActiveConfPassword("eyes")
+                    : setActiveConfPassword("eye")
+                }
+              >
+                {activeConfPassword == "eye" ? (
+                  <IonIcon icon={eyeOffOutline} className="eye" />
+                ) : (
+                  <IonIcon icon={eyeOutline} className="eyes" />
+                )}
+              </div>
+            </div>
+            <button onClick={handleSubmit}>Sign In</button>
+            <div className="changes">
+              <p>
+                Alredy have an account? <a href="/login">Sign Up</a>
+              </p>
+            </div>
+            {/* <div className='d-flex justify-content-center align-items-center flex-column mt-3'>
                             <div className='socials'>
                                 <img src={Google} />
                                 <p>Login with Google</p>
@@ -66,10 +107,10 @@ export const Create = () => {
                                 <img src={Phone} />
                                 <p>Login with Mobile</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </IonContent>
-    )
-}
+                        </div> */}
+          </div>
+        </div>
+      </div>
+    </IonContent>
+  );
+};

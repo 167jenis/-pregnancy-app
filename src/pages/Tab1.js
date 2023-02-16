@@ -27,13 +27,32 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Tab1.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Axios from "axios";
 
 const Tab1 = () => {
   const slideOpts = {
     initialSlide: 1,
     speed: 400,
   };
+  const [category, setcategory] = useState("");
+  const [title, settitle] = useState("");
+  const [desc, setdesc] = useState("");
+  const [image, setimage] = useState("");
 
+  const blogdata =async (e) => { 
+    const res = await Axios.get(`https://c982-2405-201-2029-a83c-49d4-e833-29b1-98bd.in.ngrok.io/v1/user/blog/findData`);
+    console.log(res)
+
+  }
+    console.log('data6666')
+  //  await  Axios.get("https://c982-2405-201-2029-a83c-49d4-e833-29b1-98bd.in.ngrok.io/v1/user/blog/findData").then(
+  //      (response) => {
+  //        console.log(response)
+  //      }
+  //    );
+  //    console.log('dataaaaaaaa',category,title,desc,image)}
+  useEffect(()=>{blogdata()},[])
   return (
 
     <IonContent>
@@ -147,8 +166,7 @@ const Tab1 = () => {
                 <div className="d-flex align-items-center w-100 p-3">
                   <div>
                     <div className="card_image">
-                      <img
-                        src={roundImg}
+                      <img src={roundImg}
                         className="w-100 h-100 rounded-circle"
                       />
                     </div>

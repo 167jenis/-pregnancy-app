@@ -16,7 +16,7 @@ export const Babyname = () => {
                 </div>
 
             </IonHeader>
-            <div>Denish</div>
+            <div>Utsav</div>
         </IonContent>
     )
 }

@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonIcon } from '@ionic/react'
 import { chevronBackOutline, personCircleOutline } from 'ionicons/icons'
 import React from 'react'
+
 import { useHistory } from 'react-router'
 import "./me.css"
 
@@ -15,7 +16,7 @@ export const Guides = () => {
                     <IonIcon icon={personCircleOutline} style={{ fontSize: "24px", color: "white" }} />
                 </div>
             </IonHeader>
-            <div>Denish</div>
+            <div></div>
         </IonContent>
     )
 }

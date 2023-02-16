@@ -1,12 +1,19 @@
-import { IonContent, IonHeader, IonIcon } from "@ionic/react";
+import { IonButton, IonContent, IonHeader, IonIcon } from "@ionic/react";
 import { chevronBackOutline, personCircleOutline } from "ionicons/icons";
 import React from "react";
-import { IonInput, IonItem, IonLabel, IonList } from "@ionic/react";
+import {
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonSelect,
+  IonSelectOption,
+} from "@ionic/react";
 import { IonCheckbox } from "@ionic/react";
 import { useHistory } from "react-router";
 import "./me.css";
 
-export const ToDo = () => {
+export const Appointment2 = () => {
   const history = useHistory();
   return (
     <IonContent>
@@ -17,7 +24,7 @@ export const ToDo = () => {
             onClick={() => history.push("/me")}
             style={{ fontSize: "24px", color: "white" }}
           />
-          <p className="m-0 fw-bold fs-5 text-white">To Do</p>
+          <p className="m-0 fw-bold fs-5 text-white">Appointment</p>
           <IonIcon
             icon={personCircleOutline}
             style={{ fontSize: "24px", color: "white" }}
@@ -27,20 +34,20 @@ export const ToDo = () => {
       <div>
         <IonList>
           <IonItem>
-            <IonInput placeholder="Enter Your Task"></IonInput>
+            <IonInput placeholder="Enter Your name"></IonInput>
           </IonItem>
           <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Buy a pregnancy test</IonLabel>
+            <IonInput placeholder="Enter Your Age"></IonInput>
           </IonItem>
           <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Drink two glasses of water before breakfast</IonLabel>
+            <IonSelect placeholder="Is your first child?">
+              <IonSelectOption value="Yes">Yes</IonSelectOption>
+              <IonSelectOption value="No">No</IonSelectOption>
+            </IonSelect>
           </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Discuss my exercise routine with my healthcare provider</IonLabel>
-          </IonItem>
+          <IonButton expand="full" color="light">
+            SUBMIT 
+          </IonButton>
         </IonList>
       </div>
     </IonContent>
