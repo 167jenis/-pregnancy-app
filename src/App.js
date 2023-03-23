@@ -60,6 +60,7 @@ import { Daily } from "./pages/baby/Daily";
 import { BabyScan } from "./pages/baby/BabyScan";
 import { Guides } from "./pages/Me/Guides";
 import { MomsWeight } from "./pages/Me/MomsWeight";
+import { MomsWeight2 } from "./pages/Me/MomsWeight2";
 import { MomsBump } from "./pages/Me/MomsBump";
 import { BirthPlan } from "./pages/Me/BirthPlan";
 import { Appointments } from "./pages/Me/Appointments";
@@ -129,6 +130,9 @@ const App = () => {
               </Route>
               <Route path="/momweight">
                 <MomsWeight />
+              </Route>
+              <Route path="/momweight2">
+                <MomsWeight2/>
               </Route>
               <Route path="/mombump">
                 <MomsBump />
@@ -213,7 +217,7 @@ const App = () => {
         </IonPage>
       </IonReactRouter>
     </IonApp >
-  );
+  );  
 }
 
 export default App;
