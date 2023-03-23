@@ -16,7 +16,9 @@ export const Guides = () => {
                     <IonIcon icon={personCircleOutline} style={{ fontSize: "24px", color: "white" }} />
                 </div>
             </IonHeader>
-            <div></div>
+            <div>
+                {/* console.log(new Date().toLocaleString()) */}
+            </div>
         </IonContent>
     )
 }

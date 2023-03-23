@@ -1,11 +1,13 @@
 import { IonContent, IonHeader, IonIcon } from "@ionic/react";
 import Signin from "../../assets/images/create.jpg";
 import Axios from "axios";
-                           
+
 import {
   personOutline,
+  mailOutline,
   keyOutline,
   callOutline,
+  calendarClearOutline,
   eyeOffOutline,
   eyeOutline,
 } from "ionicons/icons";
@@ -16,24 +18,59 @@ import React, { useState } from "react";
 import "./login-create.css";
 
 export const Create = () => {
+  const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [phone, setphone] = useState("");
+  const [sDate, setSdate] = useState("");
   const [pass, setpass] = useState("");
   const [cpass, setcpass] = useState("");
 
   const [activePassword, setActivePassword] = useState("");
   const [activeConfPassword, setActiveConfPassword] = useState("");
 
-  const handleSubmit = (e) => { const data = {
-   email:email,contactNo:phone,password:pass,conformPassword:cpass
-  }
-    Axios.post("https://c982-2405-201-2029-a83c-49d4-e833-29b1-98bd.in.ngrok.io/v1/user/auth/register",data).then(
-      (response) => {
-        console.log(response)
-      }
-    );
-    console.log('dataaaa',email,phone,pass,cpass)}
+  // const validateName = (name) => {
+  //   const regex = /^[a-zA-Z-' ]+$/;
+  //   return regex.test(name);
+  // };
 
+  // const validateEmail = (email) => {
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return regex.test(email);
+  // };
+
+  // const validatePhone = (phone) => {
+  //   const regex = /^\d{10}$/;
+  //   return regex.test(phone);
+  // };
+
+  const handleSubmit = (e) => {
+    const data = {
+      name: name,
+      email: email,
+      contactNo: phone,
+      sdate: sDate,
+      password: pass,
+      confirmPassword: cpass,
+      sDate: new Date().toLocaleString(),
+    };
+    Axios.post(
+      "https://8b18-49-43-32-156.in.ngrok.io/v1/user/auth/register",
+      data
+    ).then((response) => {
+      console.log(response);
+    });
+    // if (!validateName(name)) {
+    //   return"handle invalid name";
+    // } else if (!validateEmail(email)) {
+    //   // handle invalid email
+    // } else if (!validatePhone(phone)) {
+    //   // handle invalid phone number
+    // } else {
+    //   // handle valid form submission
+    // }
+    // console.log("naammmee",name);
+    console.log("dataaaa", name, email, phone, pass, cpass, sDate);
+  };
 
   return (
     <IonContent>
@@ -46,15 +83,59 @@ export const Create = () => {
             <h3>Create Your Account</h3>
             <div className="login-create">
               <IonIcon icon={personOutline} style={{ color: "#C2C2C2" }} />
-              <input type="text" value={email} name="email" placeholder="Email...." onChange={(e) => setemail(e.target.value)} required/>
+              <input
+                type="text"
+                value={name}
+                name="name"
+                placeholder="Name...."
+                onChange={(e) => setname(e.target.value)}
+                required="true"
+              />
+            </div>
+            <div className="login-create">
+              <IonIcon icon={mailOutline} style={{ color: "#C2C2C2" }} />
+              <input
+                type="text"
+                value={email}
+                name="email"
+                placeholder="Email...."
+                onChange={(e) => setemail(e.target.value)}
+                required
+              />
             </div>
             <div className="login-create">
               <IonIcon icon={callOutline} style={{ color: "#C2C2C2" }} />
-              <input type="text" value={phone} name="phone" placeholder="Phone...." onChange={(e) => setphone(e.target.value)} maxLength="10" required="true"/>
+              <input
+                type="text"
+                value={phone}
+                name="phone"
+                placeholder="Phone...."
+                onChange={(e) => setphone(e.target.value)}
+                maxLength="10"
+                required="true"
+              />
+            </div>
+            <div className="login-create">
+              <IonIcon style={{ color: "#C2C2C2" }} />
+              <input
+                type="datetime-local"
+                value={sDate}
+                name="sDate"
+                placeholder="Start Date...."
+                onChange={(e) => setSdate(e.target.value)}
+                required="true"
+              />
             </div>
             <div className="login-create">
               <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
-              <input type="password" value={pass} name="pass" placeholder="Password...." onChange={(e) => setpass(e.target.value)} required="true"/>
+              <input
+                type="password"
+                value={pass}
+                name="pass"
+                placeholder="Password...."
+                onChange={(e) => setpass(e.target.value)}
+                required="true"
+              />
               <div
                 className="d-flex justify-content-center align-items-center"
                 onChange={(e) =>
@@ -72,7 +153,14 @@ export const Create = () => {
             </div>
             <div className="login-create">
               <IonIcon icon={keyOutline} style={{ color: "#C2C2C2" }} />
-              <input type="password" value={cpass} name="cpass" onChange={(e) => setcpass(e.target.value)} placeholder="Confirm Password...." required="true"/>
+              <input
+                type="password"
+                value={cpass}
+                name="cpass"
+                onChange={(e) => setcpass(e.target.value)}
+                placeholder="Confirm Password...."
+                required="true"
+              />
               <div
                 className="d-flex justify-content-center align-items-center"
                 onClick={() =>
