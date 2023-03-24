@@ -60,7 +60,7 @@ export const Appointment2 = (props) => {
         <div className="header py-3 px-3 d-flex justify-content-between align-items-center">
           <IonIcon
             icon={chevronBackOutline}
-            onClick={() => history.push("/me")}
+            onClick={() => history.push("/appointments")}
             style={{ fontSize: "24px", color: "white" }}
           />
           <p className="m-0 fw-bold fs-5 text-white">Appointment</p>
