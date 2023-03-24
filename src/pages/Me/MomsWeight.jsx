@@ -12,9 +12,9 @@ import "./me.css";
 export const MomsWeight = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const headers = new Headers();
-    headers.append("ngrok-skip-browser-warning", "true");
+  // useEffect(() => {
+  //   const headers = new Headers();
+  //   headers.append("ngrok-skip-browser-warning", "true");
 
     fetch(
       "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/weight/getWeight",
@@ -25,6 +25,7 @@ export const MomsWeight = () => {
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
+
 
   const [date, setdate] = useState("");
   const [weight, setweight] = useState("");
@@ -57,7 +58,7 @@ export const MomsWeight = () => {
       console.log(response);
       console.log("weightdataaa", date, weight, monthNumber, user);
       navigate();
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
@@ -76,51 +77,57 @@ export const MomsWeight = () => {
           />
         </div>
       </IonHeader>
-      <div>
-        <input
-          class="ridge"
-          type="text"
-          value={selectedValue}
-          name="weight"
-          placeholder="Enter Weight"
-          onClick={handleClick}
-          onChange={(e) => setweight(e.target.value)}
-        ></input>
+      <div class='mom-weight-main'>
+        <div class='weight-mom'>
+          <div class='mom-weight'>
+            <input
+              class="ridge"
+              type="text"
+              value={selectedValue}
+              name="weight"
+              placeholder="Enter Weight"
+              onClick={handleClick}
+              onChange={(e) => setweight(e.target.value)}
+            ></input>
+          </div>
+          <div class='mom-weight'>
+            <input
+              class="ridge"
+              type="text"
+              value={monthNumber}
+              name="month"
+              placeholder="Enter Month Number"
+              onChange={(e) => setmonth(e.target.value)}
+            ></input>
+          </div>
+        </div>
+        <div class='mom-weight'>
+          <input
+            class="ridge"
+            type="date"
+            value={date}
+            name="date"
+            onChange={(e) => setdate(e.target.value)}
+          ></input>
+        </div>
       </div>
-      <div>
-        <input
-          class="ridge"
-          type="text"
-          value={monthNumber}
-          name="month"
-          placeholder="Enter Month Number"
-          onChange={(e) => setmonth(e.target.value)}
-        ></input>
+      <div class='main-button'>
+        <button class='weight-buttons' onClick={() => handleSubmit()}>SUBMIT</button>
       </div>
-      <div>
-        <input
-          class="ridge"
-          type="datetime-local"
-          value={date}
-          name="date"
-          onChange={(e) => setdate(e.target.value)}
-        ></input>
-      </div>
-      <button onClick={() => handleSubmit()}>SUBMIT</button>
-      <div>
-        <table>
+      <div class='main-tables'>
+        <table class='tables'>
           <thead>
             <tr>
-              <th>Date</th>
+              <th colspan="2">Date</th>
               <th>Weight</th>
-              <th>MonthNumber</th>
+              <th>MonthNo.</th>
             </tr>
           </thead>
           <tbody>
             {console.log("dddd", data)}
             {data?.data?.map((user) => (
               <tr key={user.user_id}>
-                <td>{user.date}</td>
+                <td colspan="2">{user.date}</td>
                 <td>{user.weight}</td>
                 <td>{user.monthNumber}</td>
               </tr>
