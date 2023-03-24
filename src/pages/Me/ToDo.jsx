@@ -12,15 +12,17 @@ export const ToDo = () => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [status, setIsChecked] = useState(false);
-  const [user,setUser] = useState("");
+  const [user, setUser] = useState("");
+
+  const abc = localStorage.getItem("token");
+  console.log(abc, "bbbbb");
   function handleCheckboxChange() {
     setIsChecked(!status);
   }
 
-  // date: new Date().toLocaleString()
   const handleSubmit = async (e) => {
     const todataa = {
-      user_id : "6412af6bbdfc42c19fb00f6c",
+      user_id: "6412af6bbdfc42c19fb00f6c",
       title: title,
       date: new Date().toLocaleString(),
       status: status,
@@ -30,10 +32,13 @@ export const ToDo = () => {
 
     try {
       const response = await axios.post(
-        "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/todo/createTodo/",
-        todataa
+        "https://8e53-2405-201-2029-a83c-7454-e834-5eb5-b804.in.ngrok.io/v1/user/todo/createTodo/",
+        todataa,
+        {
+          headers: { Authorization: `Bearer ${abc}` },
+        }
       );
-      console.log(response);
+      console.log(response, "respontodo");
       console.log("todataa", title, status, date, user);
     } catch (error) {}
   };
@@ -62,7 +67,7 @@ export const ToDo = () => {
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Enter Your Task"
           ></input>
-          <button onClick={()=>handleSubmit()}>Done</button>
+          <button onClick={() => handleSubmit()}>Done</button>
           <div>
             <label>
               <input

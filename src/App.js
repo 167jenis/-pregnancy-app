@@ -19,32 +19,32 @@ import Tab4 from "./pages/Tab4";
 import Tab5 from "./pages/Tab5";
 // import Home from "../src/assets/images/tab images/home.png"
 
-import '@ionic/react/css/core.css';
+import "@ionic/react/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+import "@ionic/react/css/normalize.css";
+import "@ionic/react/css/structure.css";
+import "@ionic/react/css/typography.css";
 
 /* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
-import Home from "../src/assets/images/tab-images/Home.svg"
-import Baby from "../src/assets/images/tab-images/Baby.svg"
-import Me from "../src/assets/images/tab-images/Me.svg"
-import User from "../src/assets/images/tab-images/User.svg"
-import Menu from "../src/assets/images/tab-images/Menu.svg"
+import "@ionic/react/css/padding.css";
+import "@ionic/react/css/float-elements.css";
+import "@ionic/react/css/text-alignment.css";
+import "@ionic/react/css/text-transformation.css";
+import "@ionic/react/css/flex-utils.css";
+import "@ionic/react/css/display.css";
+import Home from "../src/assets/images/tab-images/Home.svg";
+import Baby from "../src/assets/images/tab-images/Baby.svg";
+import Me from "../src/assets/images/tab-images/Me.svg";
+import User from "../src/assets/images/tab-images/User.svg";
+import Menu from "../src/assets/images/tab-images/Menu.svg";
 
-import Homes from "../src/assets/images/tab-images/homes.svg"
-import Babys from "../src/assets/images/tab-images/babys.svg"
-import Mes from "../src/assets/images/tab-images/mes.svg"
-import Users from "../src/assets/images/tab-images/users.svg"
-import Menus from "../src/assets/images/tab-images/menus.svg"
-import "./App.css"
+import Homes from "../src/assets/images/tab-images/homes.svg";
+import Babys from "../src/assets/images/tab-images/babys.svg";
+import Mes from "../src/assets/images/tab-images/mes.svg";
+import Users from "../src/assets/images/tab-images/users.svg";
+import Menus from "../src/assets/images/tab-images/menus.svg";
+import "./App.css";
 
 /* Theme variables */
 import "./theme/variables.css";
@@ -72,7 +72,7 @@ import { TellAFriend } from "./pages/setting/tellAFriend";
 setupIonicReact();
 
 const App = () => {
-  const [active, setActive] = useState("home")
+  const [active, setActive] = useState("home");
   return (
     <IonApp>
       <IonReactRouter>
@@ -132,7 +132,7 @@ const App = () => {
                 <MomsWeight />
               </Route>
               <Route path="/momweight2">
-                <MomsWeight2/>
+                <MomsWeight2 />
               </Route>
               <Route path="/mombump">
                 <MomsBump />
@@ -162,62 +162,62 @@ const App = () => {
               </Route>
             </IonRouterOutlet>
             <IonTabBar slot="bottom" className="icones">
-              <IonTabButton tab="home" href="/home" className="icon-img" onClick={() => setActive("home")}>
+              <IonTabButton
+                tab="home"
+                href="/home"
+                className="icon-img"
+                onClick={() => setActive("home")}
+              >
                 {/* <IonIcon icon={home} /> */}
-                {active == 'home' ?
-                  <img src={Homes} /> :
-
-                  <img src={Home} />
-                }
+                {active == "home" ? <img src={Homes} /> : <img src={Home} />}
                 <IonLabel></IonLabel>
               </IonTabButton>
-              <IonTabButton tab="tab2" href="/baby" className="icon-img" onClick={() => setActive("baby")}>
+              <IonTabButton
+                tab="tab2"
+                href="/baby"
+                className="icon-img"
+                onClick={() => setActive("baby")}
+              >
                 {/* <IonIcon icon={ellipse} /> */}
-                {active == 'baby' ?
-                  <img src={Babys} />
-
-                  :
-                  <img src={Baby} />
-
-                }
+                {active == "baby" ? <img src={Babys} /> : <img src={Baby} />}
                 <IonLabel></IonLabel>
               </IonTabButton>
-              <IonTabButton tab="tab3" href="/me" className="icon-img" onClick={() => setActive("me")}>
+              <IonTabButton
+                tab="tab3"
+                href="/me"
+                className="icon-img"
+                onClick={() => setActive("me")}
+              >
                 {/* <IonIcon icon={square} /> */}
-                {active == 'me' ?
-                  <img src={Mes} />
-                  :
-                  <img src={Me} />
-
-                }
+                {active == "me" ? <img src={Mes} /> : <img src={Me} />}
                 <IonLabel></IonLabel>
               </IonTabButton>
-              <IonTabButton tab="tab4" href="/user" className="icon-img" onClick={() => setActive("user")}>
+              <IonTabButton
+                tab="tab4"
+                href="/user"
+                className="icon-img"
+                onClick={() => setActive("user")}
+              >
                 {/* <IonIcon icon={home} /> */}
-                {active == 'user' ?
-                  <img src={Users} />
-                  :
-                  <img src={User} />
-
-                }
+                {active == "user" ? <img src={Users} /> : <img src={User} />}
                 <IonLabel></IonLabel>
               </IonTabButton>
-              <IonTabButton tab="tab5" href="/denny" className="icon-img" onClick={() => setActive("menu")}>
+              <IonTabButton
+                tab="tab5"
+                href="/denny"
+                className="icon-img"
+                onClick={() => setActive("menu")}
+              >
                 {/* <IonIcon icon={home} /> */}
-                {active == 'menu' ?
-                  <img src={Menus} />
-                  :
-                  <img src={Menu} />
-
-                }
+                {active == "menu" ? <img src={Menus} /> : <img src={Menu} />}
                 <IonLabel></IonLabel>
               </IonTabButton>
             </IonTabBar>
           </IonTabs>
         </IonPage>
       </IonReactRouter>
-    </IonApp >
-  );  
-}
+    </IonApp>
+  );
+};
 
 export default App;

@@ -16,9 +16,12 @@ export const MomsWeight = () => {
     const headers = new Headers();
     headers.append("ngrok-skip-browser-warning", "true");
 
-    fetch("https://169c-49-43-32-156.in.ngrok.io/v1/user/weight/getWeight", {
-      headers: headers,
-    })
+    fetch(
+      "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/weight/getWeight",
+      {
+        headers: headers,
+      }
+    )
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -26,7 +29,7 @@ export const MomsWeight = () => {
   const [date, setdate] = useState("");
   const [weight, setweight] = useState("");
   const [monthNumber, setmonth] = useState("");
-  const [user,setUser] = useState("");
+  const [user, setUser] = useState("");
 
   const location = useLocation();
   const selectedValue = new URLSearchParams(location.search).get(
@@ -40,7 +43,7 @@ export const MomsWeight = () => {
 
   const handleSubmit = async (e) => {
     const wdataa = {
-      user_id : "6412af6bbdfc42c19fb00f6c",
+      user_id: "6412af6bbdfc42c19fb00f6c",
       date: date,
       weight: selectedValue,
       monthNumber: monthNumber,
@@ -48,7 +51,7 @@ export const MomsWeight = () => {
     console.log(wdataa, "data==>>>");
     try {
       const response = await axios.post(
-        "https://d092-2405-201-2029-a83c-18e3-8154-c699-46af.in.ngrok.io/v1/user/weight/addWeight/",
+        "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/weight/addWeight/",
         wdataa
       );
       console.log(response);

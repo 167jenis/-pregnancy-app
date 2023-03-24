@@ -54,7 +54,7 @@ export const Create = () => {
       sDate: new Date().toLocaleString(),
     };
     Axios.post(
-      "https://8b18-49-43-32-156.in.ngrok.io/v1/user/auth/register",
+      "https://8e53-2405-201-2029-a83c-7454-e834-5eb5-b804.in.ngrok.io/v1/user/auth/register",
       data
     ).then((response) => {
       console.log(response);

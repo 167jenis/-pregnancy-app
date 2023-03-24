@@ -47,7 +47,7 @@ export const Appointment2 = (props) => {
 
     try {
       const response = await axios.post(
-        "https://cfe0-2405-201-2029-a83c-f97a-f347-e18e-f358.in.ngrok.io/v1/user/appointment/addAppointment/",
+        "https://8e53-2405-201-2029-a83c-7454-e834-5eb5-b804.in.ngrok.io/v1/user/appointment/addAppointment/",
         dataa
       );
       console.log(response);
@@ -55,12 +55,12 @@ export const Appointment2 = (props) => {
     } catch (error) {}
   };
   return (
-    <IonContent>
+    <IonContent>  
       <IonHeader>
         <div className="header py-3 px-3 d-flex justify-content-between align-items-center">
           <IonIcon
             icon={chevronBackOutline}
-            onClick={() => history.push("/me")}
+            onClick={() => history.push("/appointments")}
             style={{ fontSize: "24px", color: "white" }}
           />
           <p className="m-0 fw-bold fs-5 text-white">Appointment</p>
@@ -100,7 +100,7 @@ export const Appointment2 = (props) => {
         <div>
           <input
             class="ridge"
-            type="datetime-local"
+            type="date"
             value={date}
             name="date"
             onChange={(e) => setdate(e.target.value)}
