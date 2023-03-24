@@ -16,15 +16,16 @@ export const MomsWeight = () => {
   //   const headers = new Headers();
   //   headers.append("ngrok-skip-browser-warning", "true");
 
-  //   fetch(
-  //     "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/weight/getWeight",
-  //     {
-  //       headers: headers,
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((json) => setData(json));
-  // }, []);
+    fetch(
+      "https://98d8-2405-201-2029-a83c-247b-e518-d56b-7159.in.ngrok.io/v1/user/weight/getWeight",
+      {
+        headers: headers,
+      }
+    )
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
 
   const [date, setdate] = useState("");
   const [weight, setweight] = useState("");
