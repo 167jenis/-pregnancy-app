@@ -60,9 +60,11 @@ import { Daily } from "./pages/baby/Daily";
 import { BabyScan } from "./pages/baby/BabyScan";
 import { Guides } from "./pages/Me/Guides";
 import { MomsWeight } from "./pages/Me/MomsWeight";
+import { MomsWeight2 } from "./pages/Me/MomsWeight2";
 import { MomsBump } from "./pages/Me/MomsBump";
 import { BirthPlan } from "./pages/Me/BirthPlan";
 import { Appointments } from "./pages/Me/Appointments";
+import { Appointment2 } from "./pages/Me/Appointment2";
 import { ToDo } from "./pages/Me/ToDo";
 import { Setting } from "./pages/setting/setting";
 import { TellAFriend } from "./pages/setting/tellAFriend";
@@ -92,9 +94,9 @@ const App = () => {
               <Route path="/user">
                 <Tab4 />
               </Route>
-              <Route path="/denny">
+              {/* <Route path="/denny">
                 <Tab5 />
-              </Route>
+              </Route> */}
               <Route path="/login">
                 <Login />
               </Route>
@@ -129,6 +131,9 @@ const App = () => {
               <Route path="/momweight">
                 <MomsWeight />
               </Route>
+              <Route path="/momweight2">
+                <MomsWeight2/>
+              </Route>
               <Route path="/mombump">
                 <MomsBump />
               </Route>
@@ -137,6 +142,9 @@ const App = () => {
               </Route>
               <Route path="/appointments">
                 <Appointments />
+              </Route>
+              <Route path="/appointment2">
+                <Appointment2 />
               </Route>
               <Route path="/todo">
                 <ToDo />
@@ -209,7 +217,7 @@ const App = () => {
         </IonPage>
       </IonReactRouter>
     </IonApp >
-  );
+  );  
 }
 
 export default App;
